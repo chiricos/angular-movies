@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PeliculasService } from '../servicio/peliculas.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { PeliculasService } from '../servicio/peliculas.service';
 })
 export class PeliculasComponent implements OnInit {
 
-  constructor(public peliculasServicio:PeliculasService) { }
+  constructor(private router:Router, public peliculasServicio:PeliculasService) { }
 
   ngOnInit() {
   }
@@ -33,4 +34,8 @@ export class PeliculasComponent implements OnInit {
     this.end = 9 + (page*9);
   }
   
+  detalles(idx){
+    this.router.navigate(['/pelicula',idx]);
+  }
+
 }

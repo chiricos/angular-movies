@@ -814,4 +814,8 @@ export class PeliculasService {
     return this.movies;
   }
 
+  getMovie(id) {
+    return this.movies[id];
+  }
+
 }
