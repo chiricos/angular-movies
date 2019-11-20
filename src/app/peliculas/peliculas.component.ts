@@ -35,7 +35,7 @@ export class PeliculasComponent implements OnInit {
   }
   
   detalles(idx){
-    this.router.navigate(['/pelicula',idx]);
+    this.router.navigate(['/pelicula',(idx+this.start)]);
   }
 
 }
